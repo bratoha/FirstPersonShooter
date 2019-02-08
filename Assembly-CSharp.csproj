@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Model\FlashLightModel.cs" />
     <Compile Include="Assets\Scripts\Model\Gun.cs" />
     <Compile Include="Assets\Scripts\Model\ObjectManager.cs" />
+    <Compile Include="Assets\Scripts\Model\Shootgun.cs" />
     <Compile Include="Assets\Scripts\Model\UnitMotor.cs" />
     <Compile Include="Assets\Scripts\Model\Weapon.cs" />
     <Compile Include="Assets\Scripts\View\AimUiText.cs" />

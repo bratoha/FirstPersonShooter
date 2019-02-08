@@ -8,10 +8,13 @@ namespace Geekbrains
 		private KeyCode _activeFlashLight = KeyCode.F;
 		private KeyCode _cancel = KeyCode.Escape;
 		private KeyCode _reloadClip = KeyCode.R;
+        private int _currentWeaponID;
+        private int _maxAmountOfWeapons;
 
-		public InputController()
+        public InputController()
 		{
 			Cursor.lockState = CursorLockMode.Locked;
+            _maxAmountOfWeapons = Main.Instance.ObjectManager.Weapons.Length;
 		}
 
 		public override void OnUpdate()
@@ -23,12 +26,19 @@ namespace Geekbrains
 			}
 			// реализовать выбор оружия по колесику мыши
 
-			if (Input.GetKeyDown(KeyCode.Alpha1))
-			{
-				SelectWeapon(0);
-			}
+			if (Input.GetAxis("Mouse ScrollWheel") < 0)
+            {
+                CheckWeaponID();
+                SelectWeapon(_currentWeaponID--);
+            }
 
-			if (Input.GetKeyDown(_cancel))
+            if(Input.GetAxis("Mouse ScrollWheel") > 0)
+            {
+                CheckWeaponID();
+                SelectWeapon(_currentWeaponID++);
+            }
+
+            if (Input.GetKeyDown(_cancel))
 			{
 				Main.Instance.WeaponController.Off();
 				Main.Instance.FlashLightController.Off();
@@ -41,10 +51,22 @@ namespace Geekbrains
 		}
 
 		private void SelectWeapon(int i)
-		{
-			Main.Instance.WeaponController.Off();
+        { 
+            Main.Instance.WeaponController.Off();
 			var tempWeapon = Main.Instance.ObjectManager.Weapons[i];
 			if (tempWeapon != null) Main.Instance.WeaponController.On(tempWeapon);
 		}
-	}
+
+        private void CheckWeaponID()
+        {
+            if (_currentWeaponID >= _maxAmountOfWeapons)
+            {
+                _currentWeaponID = 0;
+                return;
+            }
+
+            if (_currentWeaponID < 0)
+                    _currentWeaponID = _maxAmountOfWeapons - 1;
+        }
+    }
 }
