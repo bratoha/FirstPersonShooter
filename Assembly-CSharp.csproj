@@ -64,13 +64,29 @@
     <Compile Include="Assets\Scripts\Controller\FlashLightController.cs" />
     <Compile Include="Assets\Scripts\Controller\InputController.cs" />
     <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Controller\WeaponController.cs" />
+    <Compile Include="Assets\Scripts\Enum\AmmunitionType.cs" />
+    <Compile Include="Assets\Scripts\Enum\MouseButton.cs" />
+    <Compile Include="Assets\Scripts\Helper\InfoCollision.cs" />
+    <Compile Include="Assets\Scripts\Helper\Timer.cs" />
     <Compile Include="Assets\Scripts\Interface\IMotor.cs" />
+    <Compile Include="Assets\Scripts\Interface\ISetDamage.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\Model\Aim.cs" />
+    <Compile Include="Assets\Scripts\Model\Ammunition.cs" />
     <Compile Include="Assets\Scripts\Model\BaseObjectScene.cs" />
+    <Compile Include="Assets\Scripts\Model\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Model\Clip.cs" />
     <Compile Include="Assets\Scripts\Model\FlashLightModel.cs" />
+    <Compile Include="Assets\Scripts\Model\Gun.cs" />
+    <Compile Include="Assets\Scripts\Model\ObjectManager.cs" />
     <Compile Include="Assets\Scripts\Model\UnitMotor.cs" />
+    <Compile Include="Assets\Scripts\Model\Weapon.cs" />
+    <Compile Include="Assets\Scripts\View\AimUiText.cs" />
     <Compile Include="Assets\Scripts\View\FlashLightUiScrollbar.cs" />
     <Compile Include="Assets\Scripts\View\FlashLightUiText.cs" />
+    <Compile Include="Assets\Scripts\View\UiInterface.cs" />
+    <Compile Include="Assets\Scripts\View\WeaponUiText.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/aikalinin/First Person Shooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
