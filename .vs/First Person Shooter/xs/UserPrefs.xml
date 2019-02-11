@@ -1,23 +1,23 @@
 ﻿<Properties StartupConfiguration="{BBF31A51-4DDC-4918-A637-307C7199073D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/Aim.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/AICharacterControl.cs">
     <Files>
       <File FileName="Assets/Scripts/Controller/BaseController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/FlashLightUiText.cs" Line="17" Column="8" />
       <File FileName="Assets/Scripts/Model/UnitMotor.cs" Line="34" Column="1" />
       <File FileName="Assets/Scripts/Controller/PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controller/InputController.cs" Line="63" Column="14" />
-      <File FileName="Assets/Scripts/Controller/FlashLightController.cs" Line="37" Column="30" />
+      <File FileName="Assets/Scripts/Controller/FlashLightController.cs" Line="14" Column="1" />
       <File FileName="Assets/Scripts/Model/FlashLightModel.cs" Line="72" Column="22" />
       <File FileName="Assets/Scripts/Interface/IMotor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Main.cs" Line="8" Column="26" />
+      <File FileName="Assets/Scripts/Main.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/FlashLightUiScrollbar.cs" Line="17" Column="1" />
       <File FileName="Assets/Scripts/View/AimUiText.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controller/WeaponController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/View/UiInterface.cs" Line="21" Column="54" />
-      <File FileName="Assets/Scripts/Model/Aim.cs" Line="31" Column="17" />
+      <File FileName="Assets/Scripts/Controller/WeaponController.cs" Line="22" Column="5" />
+      <File FileName="Assets/Scripts/View/UiInterface.cs" Line="39" Column="47" />
+      <File FileName="Assets/Scripts/Model/Aim.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Ammunition.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Gun.cs" Line="12" Column="66" />
-      <File FileName="Assets/Scripts/Model/Weapon.cs" Line="10" Column="20" />
+      <File FileName="Assets/Scripts/Model/Weapon.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/View/WeaponUiText.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/BaseObjectScene.cs" Line="27" Column="8" />
       <File FileName="Assets/Scripts/Model/ObjectManager.cs" Line="1" Column="1" />
@@ -26,6 +26,9 @@
       <File FileName="Assets/Scripts/Helper/InfoCollision.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Model/Shootgun.cs" Line="14" Column="62" />
       <File FileName="Assets/Scripts/Model/Clip.cs" Line="1" Column="1" />
+      <File FileName="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller/SelectionController.cs" Line="28" Column="30" />
+      <File FileName="Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/AICharacterControl.cs" Line="31" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

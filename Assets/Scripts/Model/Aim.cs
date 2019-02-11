@@ -5,9 +5,8 @@ namespace Geekbrains
 {
 	public class Aim : MonoBehaviour, ISetDamage
 	{
-        [SerializeField] uint _armor = 5;
+		public event Action OnPointChange;
 
-        public event Action OnPointChange;
 		public float Hp = 100;
 		private bool _isDead;
 		// дописать поглащение урона
@@ -16,7 +15,7 @@ namespace Geekbrains
 			if (_isDead) return;
 			if (Hp > 0)
 			{
-				Hp -= CalculateDamage(info.Damage);
+				Hp -= info.Damage;
 			}
 
 			if (Hp <= 0)
@@ -33,12 +32,5 @@ namespace Geekbrains
 				_isDead = true;
 			}
 		}
-     
-        private float CalculateDamage(float damage)
-        {
-            if (damage - _armor < 0)
-                return 0;
-            return damage - _armor;
-        }
-    }
+	}
 }

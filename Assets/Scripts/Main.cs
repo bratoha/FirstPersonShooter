@@ -9,6 +9,7 @@ namespace Geekbrains
 		public InputController InputController { get; private set; }
 		public PlayerController PlayerController { get; private set; }
 		public WeaponController WeaponController { get; private set; }
+		public SelectionController SelectionController { get; private set; }
 		public ObjectManager ObjectManager { get; private set; }
 		public Transform Player { get; private set; }
 		public Transform MainCamera { get; private set; }
@@ -32,12 +33,14 @@ namespace Geekbrains
 			FlashLightController = new FlashLightController();
 			InputController = new InputController();
 			InputController.On();
+			SelectionController = new SelectionController();
 			WeaponController = new WeaponController();
-			Controllers = new BaseController[4];
+			Controllers = new BaseController[5];
 			Controllers[0] = FlashLightController;
 			Controllers[1] = InputController;
 			Controllers[2] = PlayerController;
 			Controllers[3] = WeaponController;
+			Controllers[4] = SelectionController;
 		}
 
 		private void Update()

@@ -4,7 +4,7 @@ namespace Geekbrains
 {
 	public class UiInterface
 	{
-        /*private FlashLightUiText _flashLightUiText;
+		private FlashLightUiText _flashLightUiText;
 
 		public FlashLightUiText LightUiText
 		{
@@ -14,21 +14,9 @@ namespace Geekbrains
 					_flashLightUiText = MonoBehaviour.FindObjectOfType<FlashLightUiText>();
 				return _flashLightUiText;
 			}
-		}*/
+		}
 
-        private FlashLightUiScrollbar _flashLightUiScrollbar;
-
-        public FlashLightUiScrollbar LightUiScrollbar
-        {
-            get
-            {
-                if (!_flashLightUiScrollbar)
-                    _flashLightUiScrollbar = MonoBehaviour.FindObjectOfType<FlashLightUiScrollbar>();
-                return _flashLightUiScrollbar;
-            }
-        }
-
-        private WeaponUiText _weaponUiText;
+		private WeaponUiText _weaponUiText;
 
 		public WeaponUiText WeaponUiText
 		{
@@ -37,6 +25,30 @@ namespace Geekbrains
 				if (!_weaponUiText)
 					_weaponUiText = MonoBehaviour.FindObjectOfType<WeaponUiText>();
 				return _weaponUiText;
+			}
+		}
+
+        private FlashLightUiScrollbar _flashLightUiScrollbar;
+
+        public FlashLightUiScrollbar FlashLightUiScrollbar 
+        {
+            get
+            {
+                if (!_flashLightUiScrollbar)
+                    _flashLightUiScrollbar = MonoBehaviour.FindObjectOfType<FlashLightUiScrollbar>();
+                return _flashLightUiScrollbar; 
+            }
+        }
+
+        private SelectionObjMessageUi _selectionObjMessageUi;
+
+		public SelectionObjMessageUi SelectionObjMessageUi
+		{
+			get
+			{
+				if (!_selectionObjMessageUi)
+					_selectionObjMessageUi = MonoBehaviour.FindObjectOfType<SelectionObjMessageUi>();
+				return _selectionObjMessageUi;
 			}
 		}
 	}

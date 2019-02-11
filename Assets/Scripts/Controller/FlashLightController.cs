@@ -11,7 +11,7 @@ namespace Geekbrains
 
             if (!IsActive)
             {
-                UiInterface.LightUiScrollbar.Scrollbar = 
+                UiInterface.FlashLightUiScrollbar.Scrollbar =
                     _flashLight.GetBatteryCharge();
                 _flashLight.Charge();
                 return;
@@ -21,7 +21,7 @@ namespace Geekbrains
 			_flashLight.Rotation();
 			if (_flashLight.EditBatteryCharge())
 			{
-                UiInterface.LightUiScrollbar.Scrollbar = 
+                UiInterface.FlashLightUiScrollbar.Scrollbar =
                      _flashLight.GetBatteryCharge();
 			}
 			else
