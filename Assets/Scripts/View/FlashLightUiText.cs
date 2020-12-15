@@ -14,9 +14,7 @@ namespace Geekbrains
 
 		public float Text
 		{
-            set 
-            {
-             _text.text = $"{value:0.0}"; }
+			set => _text.text = $"{value:0.0}";
 		}
 
 		public void SetActive(bool value)

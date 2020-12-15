@@ -4,22 +4,16 @@ namespace Geekbrains
 {
 	public class FlashLightController : BaseController
 	{
-		private FlashLightModel _flashLight;
-        private FlashLightUiScrollbar _flashLightScrollbar;
-
-		public FlashLightController()
-		{
-			_flashLight = MonoBehaviour.FindObjectOfType<FlashLightModel>();
-            _flashLightScrollbar = MonoBehaviour.FindObjectOfType<FlashLightUiScrollbar>();
-            Off();
-        }
-
+		private FlashLightModel _flashLight = Main.Instance.ObjectManager.FlashLight;
+		
 		public override void OnUpdate()
 		{
+
             if (!IsActive)
-             { 
-                _flashLight.Charging();
-                _flashLightScrollbar.Scrollbar = _flashLight.GetCurrentCharge();
+            {
+                UiInterface.FlashLightUiScrollbar.Scrollbar =
+                    _flashLight.GetBatteryCharge();
+                _flashLight.Charge();
                 return;
             }
 
@@ -27,7 +21,8 @@ namespace Geekbrains
 			_flashLight.Rotation();
 			if (_flashLight.EditBatteryCharge())
 			{
-                _flashLightScrollbar.Scrollbar = _flashLight.GetCurrentCharge();
+                UiInterface.FlashLightUiScrollbar.Scrollbar =
+                     _flashLight.GetBatteryCharge();
 			}
 			else
 			{
@@ -39,7 +34,7 @@ namespace Geekbrains
 		{
 			if (IsActive)return;
 			base.On();
-            _flashLight.Switch(true);
+		  _flashLight.Switch(true);
 		}
 
 		public sealed override void Off()
@@ -47,7 +42,6 @@ namespace Geekbrains
 			if (!IsActive) return;
 			base.Off();
 			_flashLight.Switch(false);
-
-        }
+		}
 	}
 }
